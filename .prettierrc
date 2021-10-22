@@ -1,0 +1,9 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "svelteBracketNewLine": false,
+  "svelteSortOrder": "scripts-markup-styles"
+}
