@@ -67,8 +67,8 @@
     transition: transform 0.2s ease-in-out;
     margin-right: 40px;
   }
-  .toggle:hover,
-  .opened {
+  .toggle:hover {
+    /* .opened { */
     background-color: var(--athens);
     transform: rotate(90deg);
   }
