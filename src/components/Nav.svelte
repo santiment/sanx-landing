@@ -1,5 +1,5 @@
 <nav>
-  <div class="content row v-center">
+  <div class="section row v-center">
     <a href="/" class="body-2 txt-m mrg-l mrg--r title row v-center">
       <img
         src="webkit/illus/san-logo.svg"
@@ -24,11 +24,6 @@
   nav {
     border-bottom: 1px solid var(--porcelain);
     padding: 19px 0;
-  }
-
-  .content {
-    margin: 0 auto;
-    max-width: 1152px;
   }
 
   .title {
