@@ -1,4 +1,5 @@
 <script>
+  import Form from '../Form.svelte'
 </script>
 
 <section class="section">
@@ -6,14 +7,7 @@
     <h1 class="txt-b">
       <span>SanX:</span> actively traded index based on crypto-native metrics
     </h1>
-    <form class="border body-2 row request">
-      <input
-        name="email"
-        type="email"
-        value=""
-        placeholder="Enter your email" />
-      <button type="submit" class="btn btn-1">Leave request</button>
-    </form>
+    <Form class="body-2" />
   </div>
 
   <img src="eth-coin.svg" alt="eth" class="eth" />
@@ -70,21 +64,5 @@
 
   span {
     color: var(--purple);
-  }
-
-  .request {
-    padding: 5px;
-    max-width: 406px;
-  }
-
-  input {
-    padding: 0px 12px;
-    flex: 1;
-  }
-
-  .btn {
-    --bg: var(--purple);
-    --bg-hover: var(--purple-hover);
-    --color: var(--white);
   }
 </style>
