@@ -16,3 +16,17 @@ forFile(['icons', 'illus', 'sprites'].map(webkitMap), async (file) => {
 
   fs.writeFileSync(outPath, content.toString())
 })
+
+forFile(
+  [path.resolve(LIB, 'styles/*.css'), path.resolve(LIB, 'fonts/*.*')],
+  async (file) => {
+    const content = fs.readFileSync(file)
+    const filePath = file.replace(LIB, '')
+    const outPath = STATIC + filePath
+    const fileName = path.basename(filePath)
+
+    mkdir(outPath.replace(fileName, ''))
+
+    fs.writeFileSync(outPath, content.toString())
+  },
+)
