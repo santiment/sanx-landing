@@ -1,10 +1,18 @@
 <script>
+  import Svg from 'webkit/ui/Svg.svelte'
   import Form from './Form.svelte'
 </script>
 
 <footer class="section">
   <div class="body-2 row top justify">
-    <div class="description">Behavioral analytics for the crypto market</div>
+    <div class="description">
+      <a href="https://santiment.net/"
+        ><img
+          alt="Santiment"
+          src="webkit/illus/santiment.svg"
+          class="mrg-l mrg--b" /></a>
+      Behavioral analytics for the crypto market
+    </div>
     <div class="column">
       <a href="https://santiment.net/terms/" target="_blank" class="link"
         >About us</a>
@@ -44,6 +52,11 @@
       <Form class="mrg-xl mrg--b body-3" label="Subscribe" />
 
       <h4 class="txt-m mrg-m mrg--b">Download Santiment app</h4>
+      <a
+        target="_blank"
+        href="https://play.google.com/store/apps/details?id=net.santiment.sanbase.android">
+        <img alt="Google" src="webkit/illus/google-app.svg" />
+      </a>
     </div>
   </div>
   <div class="bottom row">
@@ -60,12 +73,27 @@
       class="mrg-a mrg--r extra">Media Kit</a>
 
     <div class="socials">
-      <a href="https://twitter.com/santimentfeed" target="_blank"> TW</a>
-      <a href="https://github.com/santiment" target="_blank"> G</a>
-      <a href="https://santiment.net/discord" target="_blank"> D</a>
-      <a href="https://t.me/santiment_network" target="_blank"> TG</a>
-      <a href="https://www.youtube.com/c/santimentnetwork" target="_blank">
-        YT</a>
+      <a
+        href="https://twitter.com/santimentfeed"
+        target="_blank"
+        class="social">
+        <Svg id="twitter" w="20" h="16" />
+      </a>
+      <a href="https://github.com/santiment" target="_blank" class="social">
+        <Svg id="github" w="20" h="20" />
+      </a>
+      <a href="https://santiment.net/discord" target="_blank" class="social">
+        <Svg id="discord" w="20" h="14" />
+      </a>
+      <a href="https://t.me/santiment_network" target="_blank" class="social">
+        <Svg id="telegram" w="20" h="16" />
+      </a>
+      <a
+        href="https://www.youtube.com/c/santimentnetwork"
+        target="_blank"
+        class="social">
+        <Svg id="youtube" w="20" h="14" />
+      </a>
     </div>
   </div>
 </footer>
@@ -111,5 +139,9 @@
 
   .forms {
     --max-width: 100%;
+  }
+
+  .social {
+    margin-left: 35px;
   }
 </style>

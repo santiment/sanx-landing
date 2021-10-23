@@ -14,7 +14,7 @@
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^1.0.0",
-    "san-webkit": "https://github.com/santiment/san-webkit#45b0180"
+    "san-webkit": "https://github.com/santiment/san-webkit#e4bd922"
   },
   "devDependencies": {
     "copy-webpack-plugin": "5.1.2",
