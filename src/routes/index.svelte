@@ -3,6 +3,7 @@
   import Header from '@cmp/sections/Header.svelte'
   import Data from '@cmp/sections/Data.svelte'
   import Methodology from '@cmp/sections/Methodology.svelte'
+  import Request from '@cmp/sections/Request.svelte'
   import Footer from '@cmp/Footer.svelte'
 </script>
 
@@ -17,5 +18,7 @@
 <Data />
 
 <Methodology />
+
+<Request />
 
 <Footer />

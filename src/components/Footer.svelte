@@ -79,7 +79,7 @@
 
   .top {
     color: var(--waterloo);
-    padding-bottom: 53px;
+    padding: 63px 0 53px;
   }
 
   .description {
