@@ -103,7 +103,13 @@ module.exports = {
       ],
     },
     mode,
-    plugins: [new WebpackModules()],
+    plugins: [
+      new WebpackModules(),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(mode),
+        'process.env.MEDIA_PATH': JSON.stringify('webkit'),
+      }),
+    ],
     performance: {
       hints: false, // it doesn't matter if server.js is large
     },

@@ -1,3 +1,7 @@
+<script>
+  import Products from '@cmp/Products/index.svelte'
+</script>
+
 <nav>
   <div class="section row v-center">
     <a href="/" class="body-2 txt-m mrg-l mrg--r title row v-center">
@@ -7,7 +11,7 @@
         class="mrg-s mrg--r logo" />
       SanX</a>
 
-    <div class="mrg-s mrg--r toggle" />
+    <Products />
 
     <a class="link" href="#metrics">Metrics</a>
     <a class="link" href="#changes">Changes</a>
@@ -51,20 +55,5 @@
   .logo {
     width: 32px;
     height: 32px;
-  }
-
-  .toggle {
-    width: 32px;
-    height: 32px;
-    background: url(webkit/illus/products/toggle.svg) no-repeat 50%;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: transform 0.2s ease-in-out;
-    margin-right: 40px;
-  }
-  .toggle:hover {
-    /* .opened { */
-    background-color: var(--athens);
-    transform: rotate(90deg);
   }
 </style>
