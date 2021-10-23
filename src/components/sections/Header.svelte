@@ -7,7 +7,11 @@
       <span>SanX:</span> actively traded index based on crypto-native metrics
     </h1>
     <form class="border body-2 row request">
-      <input name="email" type="email" value="" />
+      <input
+        name="email"
+        type="email"
+        value=""
+        placeholder="Enter your email" />
       <button type="submit" class="btn btn-1">Leave request</button>
     </form>
   </div>
