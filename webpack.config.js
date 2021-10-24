@@ -32,6 +32,21 @@ const cssLoaderRule = {
   ],
 }
 
+const IS_PROD_MODE = process.env.BACKEND_URL === 'https://api.santiment.net'
+const ENVS = {
+  'process.env.NODE_ENV': JSON.stringify(mode),
+  'process.env.BACKEND_URL': JSON.stringify(process.env.BACKEND_URL),
+  'process.env.RAVEN_DSN': JSON.stringify(process.env.RAVEN_DSN),
+  'process.env.IS_STAGE': JSON.stringify(!IS_PROD_MODE),
+  'process.env.IS_PROD_MODE': JSON.stringify(IS_PROD_MODE),
+  'process.env.IS_DEV_MODE': JSON.stringify(dev),
+  'process.env.GIT_HEAD': JSON.stringify(process.env.GIT_HEAD),
+  'process.env.GQL_SERVER_URL': JSON.stringify(
+    process.env.BACKEND_URL + '/graphql',
+  ),
+  'process.env.MEDIA_PATH': JSON.stringify('webkit'),
+}
+
 module.exports = {
   client: {
     entry: config.client.entry(),
@@ -68,8 +83,7 @@ module.exports = {
       // dev && new webpack.HotModuleReplacementPlugin(),
       new webpack.DefinePlugin({
         'process.browser': true,
-        'process.env.NODE_ENV': JSON.stringify(mode),
-        'process.env.MEDIA_PATH': JSON.stringify('webkit'),
+        ...ENVS,
       }),
     ].filter(Boolean),
     devtool: dev && 'inline-source-map',
@@ -106,8 +120,8 @@ module.exports = {
     plugins: [
       new WebpackModules(),
       new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(mode),
-        'process.env.MEDIA_PATH': JSON.stringify('webkit'),
+        'process.browser': false,
+        ...ENVS,
       }),
     ],
     performance: {

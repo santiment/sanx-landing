@@ -1,4 +1,5 @@
 <script>
+  import Allocations from '@cmp/Allocations/index.svelte'
 </script>
 
 <section id="allocations">
@@ -8,6 +9,8 @@
       Manage your exposure in DeFi based on the behavior of 1000s of token
       holders, sourced directly from the blockchain.
     </p>
+
+    <Allocations />
   </div>
 </section>
 
