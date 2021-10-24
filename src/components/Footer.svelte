@@ -49,7 +49,7 @@
     </div>
     <div class="forms">
       <h4 class="txt-m mrg-m mrg--b">Subscribe to the weekly Digest!</h4>
-      <Form class="mrg-xl mrg--b body-3" label="Subscribe" />
+      <Form class="mrg-xl mrg--b body-3 $style.form" label="Subscribe" />
 
       <h4 class="txt-m mrg-m mrg--b">Download Santiment app</h4>
       <a
@@ -143,5 +143,9 @@
 
   .social {
     margin-left: 35px;
+  }
+
+  .form {
+    width: 386px;
   }
 </style>

@@ -8,7 +8,7 @@ export const chain = [
   {
     title: 'Sanhunters',
     desc: 'Get rewarded for market research and your crypto know-how',
-    href: '/',
+    href: 'https://hunters.santiment.net/',
     logo: 'sanhunters',
   },
   {
