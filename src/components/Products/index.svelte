@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Svg from 'webkit/ui/Svg.svelte'
   import Tooltip from 'webkit/ui/Tooltip.svelte'
   import { business } from './business'
   import { chain } from './chain'
@@ -13,7 +12,9 @@
       <h3>SAN Business</h3>
       {#each business as { title, href, desc, logo, onClick }}
         <a {href} class="product" on:click={onClick}>
-          <div class="icon" style="--logo: url(/products/{logo}.svg)" />
+          <div
+            class="icon"
+            style="--logo: url(webkit/illus/products/{logo}.svg)" />
           <h2 class="body-2 txt-m">{title}</h2>
           <p>{desc}</p>
         </a>
@@ -27,7 +28,7 @@
           <div
             class="icon"
             class:active
-            style="--logo: url(/products/{logo}.svg)" />
+            style="--logo: url(webkit/illus/products/{logo}.svg)" />
           <h2 class="body-2 txt-m">{title}</h2>
           <p>{desc}</p>
           {#if note}
@@ -60,11 +61,6 @@
 
   .dropdown {
     padding: 32px 32px 24px;
-    background: url(products/wave.svg) no-repeat 100% 100%;
-
-    :global(.night-mode) & {
-      background-image: url(products/wave-dark.svg);
-    }
   }
 
   h3 {
