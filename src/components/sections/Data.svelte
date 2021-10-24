@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section>
+<section id="allocations">
   <div class="section">
     <h2 class="h2">On-chain signals for your DeFi portfolio</h2>
     <p class="body-1 mrg-l mrg--t">

@@ -4,13 +4,14 @@
   export let label = 'Leave request'
 </script>
 
-<form class="border row request {className}">
+<form class="border row {className}">
   <input name="email" type="email" value="" placeholder="Enter your email" />
   <button type="submit" class="btn btn-1">{label}</button>
 </form>
 
 <style>
-  .request {
+  form {
+    color: var(--black);
     padding: 5px;
     max-width: var(--max-width, 406px);
   }

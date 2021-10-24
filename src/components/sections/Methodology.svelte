@@ -6,7 +6,7 @@
   const blocks = [indexOverview, returnPolicy, signals]
 </script>
 
-<section class="section">
+<section class="section" id="methodology">
   <h2 class="h2">Unearth the on-chain alpha</h2>
   <p class="body-1 mrg-l mrg--t description">
     Our rebalancing strategy combines on-chain and financial signals for top
