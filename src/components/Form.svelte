@@ -2,11 +2,21 @@
   let className = ''
   export { className as class }
   export let label = 'Leave request'
+
+  let loading = false
+  function onSubmit({ currentTarget }) {
+    if (loading) return
+
+    loading = true
+    loginWithNewsletter(currentTarget.email.value)
+      .catch(() => {})
+      .finally(() => (loading = false))
+  }
 </script>
 
-<form class="border row {className}">
+<form class="border row {className}" on:submit|preventDefault={onSubmit}>
   <input name="email" type="email" value="" placeholder="Enter your email" />
-  <button type="submit" class="btn btn-1">{label}</button>
+  <button type="submit" class="btn btn-1" class:loading>{label}</button>
 </form>
 
 <style>

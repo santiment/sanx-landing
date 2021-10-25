@@ -60,7 +60,7 @@
     </div>
   </div>
   <div class="bottom row">
-    © 2016—2021 Santiment
+    © 2016—{new Date().getFullYear()} Santiment
     <a href="https://santiment.net/terms/" target="_blank" class="extra"
       >Terms</a>
     <a
