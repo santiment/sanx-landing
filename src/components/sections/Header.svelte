@@ -39,16 +39,16 @@
   }
 
   .eth {
-    right: 336px;
-    top: 278px;
+    right: 57%;
+    top: 51%;
   }
   .uni {
-    right: 398px;
-    top: 359px;
+    right: 66%;
+    top: 74%;
   }
   .avi {
-    right: 276px;
-    top: 359px;
+    right: 44%;
+    top: 69%;
   }
 
   @keyframes float {
@@ -75,9 +75,9 @@
     color: var(--purple);
   }
 
-  :global(.tablet),
+  :global(.phone-xs),
   :global(.phone),
-  :global(.phone-xs) {
+  :global(.tablet) {
     h1 {
       font-size: 32px;
       line-height: 40px;
@@ -107,18 +107,12 @@
 
     .eth {
       width: 47px;
-      right: 57%;
-      top: 51%;
     }
     .uni {
       width: 35px;
-      right: 66%;
-      top: 74%;
     }
     .avi {
       width: 46px;
-      right: 44%;
-      top: 69%;
     }
   }
 </style>
