@@ -13,14 +13,14 @@
 
     <Products />
 
-    <a class="link" href="#metrics">Metrics</a>
-    <a class="link" href="#changes">Changes</a>
-    <a class="link" href="#allocations">Allocations</a>
+    <!-- <a class="link" href="#metrics">Metrics</a> -->
+    <!-- <a class="link" href="#changes">Changes</a> -->
+    <!-- <a class="link" href="#allocations">Allocations</a> -->
     <a class="link" href="#methodology">Methodology</a>
 
-    <a class="btn border mrg-a mrg--l" href="/">Log in</a>
+    <!-- <a class="btn border mrg-a mrg--l" href="/">Log in</a> -->
 
-    <a class="btn border login mrg-l mrg--l" href="/">Create an account </a>
+    <!-- <a class="btn border login mrg-l mrg--l" href="/">Create an account</a> -->
   </div>
 </nav>
 
@@ -42,15 +42,15 @@
     color: var(--purple);
   }
 
-  .btn {
+  /* .btn {
     padding: 5px 20px;
     --color-hover: var(--purple-hover);
-  }
+    }
 
-  .login {
+    .login {
     --border: var(--purple);
     --color: var(--purple);
-  }
+    } */
 
   .logo {
     width: 32px;

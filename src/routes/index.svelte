@@ -1,6 +1,7 @@
 <script>
   import BackToTop from 'webkit/ui/BackToTop.svelte'
   import HelpFeedback from 'webkit/ui/HelpFeedback.svelte'
+  import { IsMobile } from '@/stores/responsive'
   import Nav from '@cmp/Nav.svelte'
   import Header from '@cmp/sections/Header.svelte'
   import Data from '@cmp/sections/Data.svelte'
@@ -15,7 +16,10 @@
 
 <Nav />
 
-<BackToTop class="$style.scroll" />
+{#if $IsMobile === false}
+  <BackToTop class="$style.scroll" />
+  <HelpFeedback class="$style.help" />
+{/if}
 
 <Header />
 
@@ -26,8 +30,6 @@
 <Request />
 
 <Footer />
-
-<HelpFeedback class="$style.help" />
 
 <style>
   .scroll,

@@ -98,7 +98,7 @@
   </div>
 </footer>
 
-<style>
+<style lang="scss">
   .bottom {
     padding: 24px 0;
     border-top: 1px solid var(--porcelain);
@@ -147,5 +147,13 @@
 
   .form {
     width: 386px;
+  }
+
+  :global(.tablet),
+  :global(.phone),
+  :global(.phone-xs) {
+    .top {
+      flex-direction: column;
+    }
   }
 </style>

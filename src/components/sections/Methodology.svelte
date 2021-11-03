@@ -1,4 +1,5 @@
 <script>
+  import { IsMobile } from '@/stores/responsive'
   import { indexOverview } from './indexOverview'
   import { returnPolicy } from './returnPolicy'
   import { signals } from './signals'
@@ -7,7 +8,7 @@
 </script>
 
 <section class="section" id="methodology">
-  <h2 class="h2">Unearth the on-chain alpha</h2>
+  <h2 class={$IsMobile ? 'h3' : 'h2'}>Unearth the on-chain alpha</h2>
   <p class="body-1 mrg-l mrg--t description">
     Our rebalancing strategy combines on-chain and financial signals for top
     DeFi assets. A hybrid approach that’s more than the sum of its parts.
@@ -53,6 +54,11 @@
 
 <style>
   section {
+    /* background: var(--whale); */
+    padding: 64px 15px;
+  }
+
+  :global(.desktop) section {
     padding: 82px 0;
   }
 
@@ -62,13 +68,21 @@
   }
 
   .block {
-    padding: 32px 48px;
-    background: var(--whale);
     color: var(--fiord);
-    border-radius: 4px;
+    border-bottom: 1px solid var(--porcelain);
+    margin: 0 -16px;
+    padding: 24px 16px;
   }
   .block:first-of-type {
     margin-top: 64px;
+  }
+  :global(.desktop) .block {
+    padding: 32px 48px;
+    background: var(--whale);
+    border: none;
+    border-radius: 4px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .h4 {
