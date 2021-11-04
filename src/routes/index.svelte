@@ -5,7 +5,7 @@
   import Nav from '@cmp/Nav.svelte'
   import Header from '@cmp/sections/Header.svelte'
   import Data from '@cmp/sections/Data.svelte'
-  import Methodology from '@cmp/sections/Methodology.svelte'
+  import Methodology from '@cmp/sections/Methodology/index.svelte'
   import Request from '@cmp/sections/Request.svelte'
   import Footer from '@cmp/Footer/index.svelte'
 </script>
