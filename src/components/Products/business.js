@@ -14,7 +14,7 @@ export const business = [
   {
     title: 'SanAPI',
     desc: 'The most comprehensive crypto API on the market',
-    href: 'https://neuro.santiment.net',
+    href: 'https://api.santiment.net',
     logo: 'sanapi',
   },
 ]

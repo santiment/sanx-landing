@@ -2,7 +2,7 @@
   import BackToTop from 'webkit/ui/BackToTop.svelte'
   import HelpFeedback from 'webkit/ui/HelpFeedback.svelte'
   import { IsMobile } from '@/stores/responsive'
-  import Nav from '@cmp/Nav.svelte'
+  import Nav from '@cmp/Nav/index.svelte'
   import Header from '@cmp/sections/Header.svelte'
   import Data from '@cmp/sections/Data.svelte'
   import Methodology from '@cmp/sections/Methodology/index.svelte'
