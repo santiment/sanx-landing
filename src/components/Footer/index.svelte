@@ -12,35 +12,41 @@
       Behavioral analytics for the crypto market
     </div>
     <div class="grid">
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://santiment.net/about/" target="_blank" class="link"
         >About us</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://santiment.net/pricing/" target="_blank" class="link"
         >Pricing</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://santiment.net/team/" target="_blank" class="link"
         >Team</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://santiment.net/jobs/" target="_blank" class="link"
         >Jobs</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="mailto:support@santiment.net" target="_blank" class="link"
         >Contact us</a>
 
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://academy.santiment.net/" target="_blank" class="link"
         >Academy</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://insights.santiment.net/" target="_blank" class="link"
         >Insights</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
-        >Social trends</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
-        >Historical balance</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
-        >Buy SAN</a>
+      <a
+        href="https://app.santiment.net/labs/trends"
+        target="_blank"
+        class="link">Social trends</a>
+      <a
+        href="https://app.santiment.net/labs/balance"
+        target="_blank"
+        class="link">Historical balance</a>
+      <a
+        href="https://academy.santiment.net/san-tokens/how-to-buy-san/"
+        target="_blank"
+        class="link">Buy SAN</a>
 
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://app.santiment.net/" target="_blank" class="link"
         >Sanbase</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://api.santiment.net/" target="_blank" class="link"
         >SanAPI</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://sheets.santiment.net/" target="_blank" class="link"
         >Sansheets</a>
-      <a href="https://santiment.net/terms/" target="_blank" class="link"
+      <a href="https://graphs.santiment.net/" target="_blank" class="link"
         >Graphs</a>
     </div>
     <div class="forms">

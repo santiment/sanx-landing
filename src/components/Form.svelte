@@ -1,4 +1,6 @@
 <script>
+  import { loginWithNewsletter } from '@/api/user'
+
   let className = ''
   export { className as class }
   export let label = 'Leave request'
