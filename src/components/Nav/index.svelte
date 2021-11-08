@@ -14,13 +14,15 @@
         src="webkit/illus/san-logo.svg"
         alt="SAN"
         class="mrg-s mrg--r logo" />
-      SanX</a>
+      SanX
+    </a>
 
     {#if $IsMobile}
       <Svg
-        id="cross"
-        w="12"
-        class="mrg-a mrg--l"
+        id={isMenuOpened ? 'cross' : 'menu'}
+        w={isMenuOpened ? '12' : '16'}
+        h="12"
+        class="mrg-a mrg--l $style.menu"
         on:click={() => (isMenuOpened = !isMenuOpened)} />
     {:else}
       <Products />
@@ -80,5 +82,9 @@
     z-index: 10;
     background: var(--white);
     width: 100%;
+  }
+
+  .menu {
+    fill: var(--waterloo);
   }
 </style>

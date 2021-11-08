@@ -17,12 +17,15 @@
   <a href="https://santiment.net/terms/" target="_blank" class="btn link"
     >Insights</a>
 
-  <a href="/" class="create account btn border mrg-a mrg--t"
-    >Create an account</a>
-  <a href="/" class="account btn border mrg-m mrg--t">Log in</a>
+  <!-- <a href="/" class="create account btn border mrg-a mrg--t">Create an account</a> -->
+  <!-- <a href="/" class="account btn border mrg-m mrg--t">Log in</a> -->
 </div>
 
 <style>
+  a:hover {
+    color: var(--purple);
+  }
+
   .menu {
     position: fixed;
     top: 65px;
@@ -55,7 +58,7 @@
     margin: 0 0 16px;
   }
 
-  .create {
+  /* .create {
     --border: var(--purple);
     --color: var(--purple);
   }
@@ -63,5 +66,5 @@
   .account {
     padding: 3px;
     text-align: center;
-  }
+  } */
 </style>

@@ -17,9 +17,11 @@
     </p>
   </div>
 
-  {#each blocks as block}
-    <Block isAlwaysOpened={$IsMobile === false} {...block} />
-  {/each}
+  <div class="blocks">
+    {#each blocks as block}
+      <Block isAlwaysOpened={$IsMobile === false} {...block} />
+    {/each}
+  </div>
 </section>
 
 <style>

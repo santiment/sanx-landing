@@ -7,7 +7,7 @@
   let isOpened = isAlwaysOpened || false
 </script>
 
-<div class="block body-2 mrg-l mrg--t">
+<div class="block body-2">
   <h4
     class="h4 txt-m row justify v-center"
     class:opened={isOpened}
@@ -17,6 +17,7 @@
       <Svg id="arrow" w="10" h="6" class="$style.arrow" />
     {/if}
   </h4>
+
   {#if isOpened}
     {#if text} <p>{text}</p> {/if}
     {#if items}
@@ -52,23 +53,26 @@
   {/if}
 </div>
 
-<style>
+<style lang="scss">
   .block {
     color: var(--fiord);
     border-bottom: 1px solid var(--porcelain);
     margin: 0 -16px;
     padding: 24px 16px;
   }
-  .block:first-of-type {
-    margin-top: 64px;
+  .block:first-child {
+    margin-top: 40px;
   }
   :global(.desktop) .block {
     padding: 32px 48px;
     background: var(--whale);
     border: none;
     border-radius: 4px;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 16px 0 0;
+
+    &:first-child {
+      margin-top: 64px;
+    }
   }
 
   .h4 {
