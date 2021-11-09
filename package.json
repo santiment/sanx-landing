@@ -9,13 +9,13 @@
     "build:static": "NODE_ENV=production sapper export",
     "start:ssr": "node __sapper__/build",
     "webkit": "node scripts/index",
-    "postinstall": "patch-package && npm run webkit"
+    "postinstall": "npm run webkit"
   },
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^1.0.0",
-    "san-webkit": "https://github.com/santiment/san-webkit#fa026dd"
+    "san-webkit": "https://github.com/santiment/san-webkit#4e18115"
   },
   "devDependencies": {
     "copy-webpack-plugin": "5.1.2",
@@ -36,7 +36,7 @@
     "svelte": "^3.44.1",
     "svelte-loader": "^3.1.2",
     "svelte-preprocess": "4.6.9",
-    "svelte-preprocess-cssmodules": "^1.3.2",
+    "svelte-preprocess-cssmodules": "https://github.com/DmitriVanGuard/svelte-preprocess-cssmodules#0fe6fa7",
     "webpack": "^4.46.0",
     "webpack-modules": "^1.0.0"
   }
