@@ -1,13 +1,13 @@
 <script>
+  import { IsMobile } from 'webkit/stores/responsive'
   import BackToTop from 'webkit/ui/BackToTop.svelte'
   import HelpFeedback from 'webkit/ui/HelpFeedback.svelte'
-  import { IsMobile } from '@/stores/responsive'
+  import Footer from 'webkit/ui/Footer/svelte'
   import Nav from '@cmp/Nav/index.svelte'
   import Header from '@cmp/sections/Header.svelte'
   import Data from '@cmp/sections/Data.svelte'
   import Methodology from '@cmp/sections/Methodology/index.svelte'
   import Request from '@cmp/sections/Request.svelte'
-  import Footer from '@cmp/Footer/index.svelte'
 </script>
 
 <svelte:head>
@@ -29,7 +29,7 @@
 
 <Request />
 
-<Footer />
+<Footer class="section" />
 
 <style>
   .scroll,

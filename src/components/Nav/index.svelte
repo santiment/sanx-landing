@@ -1,6 +1,7 @@
 <script>
-  import { IsMobile } from '@/stores/responsive'
-  import Products from '@cmp/Products/index.svelte'
+  import { IsMobile } from 'webkit/stores/responsive'
+  import Product from 'webkit/ui/Product.svelte'
+  import Products from 'webkit/ui/Products/svelte'
   import Svg from 'webkit/ui/Svg.svelte'
   import MobileMenu from './MobileMenu.svelte'
 
@@ -9,13 +10,7 @@
 
 <nav class:fixed={isMenuOpened}>
   <div class="section row v-center">
-    <a href="/" class="body-2 txt-m mrg-l mrg--r title row v-center">
-      <img
-        src="webkit/illus/san-logo.svg"
-        alt="SAN"
-        class="mrg-s mrg--r logo" />
-      SanX
-    </a>
+    <Product title="SanX" class="mrg-l mrg--r" />
 
     {#if $IsMobile}
       <Svg
@@ -50,10 +45,6 @@
     padding: 19px 0;
   }
 
-  .title {
-    color: var(--black);
-  }
-
   .link {
     color: var(--waterloo);
     margin-right: 32px;
@@ -71,11 +62,6 @@
     --border: var(--purple);
     --color: var(--purple);
     } */
-
-  .logo {
-    width: 32px;
-    height: 32px;
-  }
 
   .fixed {
     position: fixed;

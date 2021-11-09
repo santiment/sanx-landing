@@ -1,5 +1,5 @@
 <script>
-  import { IsMobile } from '@/stores/responsive'
+  import { IsMobile } from 'webkit/stores/responsive'
   import Block from './Block.svelte'
   import { indexOverview } from './indexOverview'
   import { returnPolicy } from './returnPolicy'

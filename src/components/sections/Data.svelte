@@ -1,6 +1,6 @@
 <script>
+  import { IsMobile } from 'webkit/stores/responsive'
   import Allocations from '@cmp/Allocations/index.svelte'
-  import { IsMobile } from '@/stores/responsive'
 </script>
 
 {#if $IsMobile === false}
