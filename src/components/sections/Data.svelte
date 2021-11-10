@@ -12,7 +12,7 @@
         holders, sourced directly from the blockchain.
       </p>
 
-      <!-- <Allocations /> -->
+      <Allocations />
     </div>
   </section>
 {/if}

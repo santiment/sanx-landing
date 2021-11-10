@@ -1,10 +1,7 @@
 <script>
-  export let project = {
-    slug: 'uniswap',
-    name: 'Uniswap',
-    ticker: 'UNI',
-  }
-  const { slug, ticker, name } = project
+  export let item
+  const { slug, ticker = '', name = slug } = item
+
   let error = false
 </script>
 

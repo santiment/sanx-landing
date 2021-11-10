@@ -1,8 +1,11 @@
 <script>
   import Table from 'webkit/ui/Table.svelte'
+  import { queryProjects } from '@/api/projects'
   import Project from './Project.svelte'
-  import Change from './Change.svelte'
+  //import Change from './Change.svelte'
   import Quantity from './Quantity.svelte'
+  import data from './allocations.json'
+  import { usdFormatter } from './utils'
 
   const columns = [
     {
@@ -20,31 +23,66 @@
     },
     {
       title: 'Price per token',
-      format: () => '$88.39',
+      format: ({ pricePerToken }) => usdFormatter(pricePerToken),
     },
     {
       title: 'Token Price',
-      format: () => '$88.39',
+      format: ({ priceUsd }) => usdFormatter(priceUsd),
     },
     {
       title: 'Allocation',
-      format: () => '24.46%',
+      format: ({ allocation }) =>
+        allocation ? +(allocation * 100).toFixed(2) + '%' : 'No data',
     },
-    {
-      title: 'Change, 24h %',
-      /* format: () => '24.46%', */
-      Component: Change,
-      className: '$style.change',
-    },
+    // {
+    //   title: 'Change, 24h %',
+    //   Component: Change,
+    //   className: '$style.change',
+    // },
   ]
 
-  const items = [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
+  const SlugData = {}
+  const slugs = data.tokens.map(({ slug, unit }) => {
+    SlugData[slug] = { slug, unit }
+    return slug
+  })
+
+  let items = []
+  let isLoading = true
+
+  if (process.browser) {
+    queryProjects(slugs).then(updateTokens)
+  }
+
+  function updateTokens(projects) {
+    let totalPrice = 0
+    projects.forEach((project) => {
+      const data = SlugData[project.slug]
+      const pricePerToken = data.unit * project.priceUsd
+      data.pricePerToken = pricePerToken
+
+      Object.assign(data, project)
+      totalPrice += pricePerToken
+    })
+    items = Object.values(SlugData)
+
+    items.forEach((item) => {
+      item.allocation = item.pricePerToken / totalPrice
+    })
+    isLoading = false
+  }
 </script>
 
 <div class="border allocations">
   <div class="body-1 txt-m top">Allocations</div>
 
-  <Table {columns} {items} keyProp="id" class="$style.table" />
+  <Table
+    {isLoading}
+    {columns}
+    {items}
+    keyProp="slug"
+    class="$style.table"
+    minRows={8} />
 </div>
 
 <style lang="scss">
@@ -64,6 +102,7 @@
 
       td {
         padding: 20px 15px !important;
+        height: 60px;
       }
     }
   }
