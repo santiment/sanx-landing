@@ -32,19 +32,21 @@ const cssLoaderRule = {
   ],
 }
 
-const IS_PROD_MODE = process.env.BACKEND_URL === 'https://api.santiment.net'
 const ENVS = {
   'process.env.NODE_ENV': JSON.stringify(mode),
-  'process.env.BACKEND_URL': JSON.stringify(process.env.BACKEND_URL),
-  'process.env.RAVEN_DSN': JSON.stringify(process.env.RAVEN_DSN),
-  'process.env.IS_STAGE': JSON.stringify(!IS_PROD_MODE),
-  'process.env.IS_PROD_MODE': JSON.stringify(IS_PROD_MODE),
-  'process.env.IS_DEV_MODE': JSON.stringify(dev),
   'process.env.GIT_HEAD': JSON.stringify(process.env.GIT_HEAD),
-  'process.env.GQL_SERVER_URL': JSON.stringify(
-    process.env.BACKEND_URL + '/graphql',
-  ),
+  'process.env.RAVEN_DSN': JSON.stringify(process.env.RAVEN_DSN),
+
+  'process.env.IS_DEV_MODE': JSON.stringify(dev),
+  'process.env.IS_PROD_MODE': JSON.stringify(!dev),
+
+  'process.env.BACKEND_URL': JSON.stringify(process.env.BACKEND_URL),
+  'process.env.GQL_SERVER_URL': 'window.GQL_SERVER_URL',
+  'process.env.IS_STAGE_BACKEND': 'window.IS_STAGE_BACKEND',
+  'process.env.IS_PROD_BACKEND': 'window.IS_PROD_BACKEND',
+
   'process.env.MEDIA_PATH': JSON.stringify('webkit'),
+  'process.env.ICONS_PATH': JSON.stringify('webkit/icons'),
 }
 
 module.exports = {
