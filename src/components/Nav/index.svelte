@@ -24,7 +24,7 @@
 
       <!-- <a class="link" href="#metrics">Metrics</a> -->
       <!-- <a class="link" href="#changes">Changes</a> -->
-      <!-- <a class="link" href="#allocations">Allocations</a> -->
+      <a class="link" href="#allocations">Allocations</a>
       <a class="link" href="#methodology">Methodology</a>
 
       <!-- <a class="btn border mrg-a mrg--l" href="/">Log in</a> -->

@@ -1,4 +1,5 @@
 <div class="menu body-2 column">
+  <a class="link" href="#allocations">Allocations</a>
   <a class="link" href="#methodology">Methodology</a>
   <div class="help btn">Help & Feedback</div>
 

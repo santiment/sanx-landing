@@ -1,11 +1,8 @@
 <script>
   import Table from 'webkit/ui/Table.svelte'
-  import { queryProjects } from '@/api/projects'
   import Project from './Project.svelte'
-  //import Change from './Change.svelte'
   import Quantity from './Quantity.svelte'
-  import data from './allocations.json'
-  import { usdFormatter } from './utils'
+  import { queryIndexTokens, usdFormatter } from './utils'
 
   const columns = [
     {
@@ -41,35 +38,14 @@
     // },
   ]
 
-  const SlugData = {}
-  const slugs = data.tokens.map(({ slug, unit }) => {
-    SlugData[slug] = { slug, unit }
-    return slug
-  })
-
   let items = []
   let isLoading = true
 
   if (process.browser) {
-    queryProjects(slugs).then(updateTokens)
-  }
-
-  function updateTokens(projects) {
-    let totalPrice = 0
-    projects.forEach((project) => {
-      const data = SlugData[project.slug]
-      const pricePerToken = data.unit * project.priceUsd
-      data.pricePerToken = pricePerToken
-
-      Object.assign(data, project)
-      totalPrice += pricePerToken
+    queryIndexTokens().then((tokens) => {
+      items = tokens
+      isLoading = false
     })
-    items = Object.values(SlugData)
-
-    items.forEach((item) => {
-      item.allocation = item.pricePerToken / totalPrice
-    })
-    isLoading = false
   }
 </script>
 
