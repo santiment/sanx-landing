@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "npm run build:static",
+    "build": "npm run webkit && npm run build:static",
     "build:ssr": "NODE_ENV=production sapper build",
     "build:static": "NODE_ENV=production sapper export",
     "start:ssr": "node __sapper__/build",

@@ -28,3 +28,5 @@ forFile(
     fs.copyFileSync(file, outPath)
   },
 )
+
+console.log('⚙ san-webkit is ready to use')
