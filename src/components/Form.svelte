@@ -1,39 +1,25 @@
 <script>
-  import { loginWithNewsletter } from '@/api/user'
+  import { track } from 'webkit/analytics'
 
   let className = ''
   export { className as class }
-  export let label = 'Leave request'
 
-  let loading = false
-  function onSubmit({ currentTarget }) {
-    if (loading) return
-
-    loading = true
-    loginWithNewsletter(currentTarget.email.value)
-      .catch(() => {})
-      .finally(() => (loading = false))
+  function onClick() {
+    track.event('leave request')
   }
 </script>
 
-<form class="border row {className}" on:submit|preventDefault={onSubmit}>
-  <input name="email" type="email" value="" placeholder="Enter your email" />
-  <button type="submit" class="btn btn-1" class:loading>{label}</button>
-</form>
+<a
+  type="submit"
+  class="btn btn-1 {className}"
+  href="https://forms.gle/sdg7LMbqzzTKZV5T7"
+  rel="noopener noreferrer"
+  target="_blank"
+  on:click={onClick}>Leave request</a>
 
 <style>
-  form {
-    color: var(--black);
-    padding: 5px;
-    max-width: var(--max-width, 406px);
-  }
-
-  input {
-    padding: 0px 12px;
-    flex: 1;
-  }
-
   .btn {
+    display: inline-block;
     --bg: var(--purple);
     --bg-hover: var(--purple-hover);
     --color: var(--white);
