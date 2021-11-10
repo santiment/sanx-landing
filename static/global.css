@@ -3,6 +3,7 @@
 :root {
   --accent: var(--purple);
   --accent-hover: var(--purple-hover);
+  --accent-light-3: var(--purple-light-3);
 }
 
 .section {

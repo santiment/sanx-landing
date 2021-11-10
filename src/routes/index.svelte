@@ -2,6 +2,7 @@
   import { IsMobile } from 'webkit/stores/responsive'
   import BackToTop from 'webkit/ui/BackToTop.svelte'
   import HelpFeedback from 'webkit/ui/HelpFeedback.svelte'
+  import CookiesPopup from 'webkit/ui/CookiesPopup.svelte'
   import Footer from 'webkit/ui/Footer/svelte'
   import Nav from '@cmp/Nav/index.svelte'
   import Header from '@cmp/sections/Header.svelte'
@@ -30,6 +31,10 @@
 <Request />
 
 <Footer class="section" />
+
+{#if process.browser}
+  <CookiesPopup />
+{/if}
 
 <style>
   .scroll,
