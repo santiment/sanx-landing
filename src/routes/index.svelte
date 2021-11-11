@@ -1,7 +1,7 @@
 <script>
   import { IsMobile } from 'webkit/stores/responsive'
   import BackToTop from 'webkit/ui/BackToTop.svelte'
-  import HelpFeedback from 'webkit/ui/HelpFeedback.svelte'
+  import HelpFeedback, { showIntercom } from 'webkit/ui/HelpFeedback.svelte'
   import CookiesPopup from 'webkit/ui/CookiesPopup.svelte'
   import Footer from 'webkit/ui/Footer/svelte'
   import Nav from '@cmp/Nav/index.svelte'
@@ -19,7 +19,7 @@
 
 {#if $IsMobile === false}
   <BackToTop class="$style.scroll" />
-  <HelpFeedback class="$style.help" />
+  <HelpFeedback class="$style.help" on:click={showIntercom} />
 {/if}
 
 <Header />

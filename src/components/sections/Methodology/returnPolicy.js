@@ -27,8 +27,7 @@ export const returnPolicy = {
       title: 'Governance',
       points: [
         {
-          title: 'Governance',
-          text: 'Assets are added once their MVRV metric crosses the opportunity zone and removed in case of the danger zone signal. We respond on the first signal fired.',
+          title: 'Red button',
         },
         {
           title: 'Delay',

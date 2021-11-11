@@ -1,7 +1,11 @@
+<script>
+  import { showIntercom } from 'webkit/ui/HelpFeedback.svelte'
+</script>
+
 <div class="menu body-2 column">
   <a class="link" href="#allocations">Allocations</a>
   <a class="link" href="#methodology">Methodology</a>
-  <div class="help btn">Help & Feedback</div>
+  <div class="help btn" on:click={showIntercom}>Help & Feedback</div>
 
   <div class="divider" />
 
