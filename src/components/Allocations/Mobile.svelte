@@ -1,5 +1,5 @@
 <script>
-  import Table from 'webkit/ui/Table.svelte'
+  import Table from 'webkit/ui/Table/svelte'
   import Project from './Project.svelte'
   import Quantity from './Quantity.svelte'
   import { queryIndexTokens } from './utils'

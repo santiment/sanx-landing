@@ -17,9 +17,11 @@
 
 <Nav />
 
-{#if $IsMobile === false}
-  <BackToTop class="$style.scroll" />
-  <HelpFeedback class="$style.help" on:click={showIntercom} />
+{#if process.browser}
+  {#if $IsMobile === false}
+    <BackToTop class="$style.scroll" />
+    <HelpFeedback class="$style.help" on:click={showIntercom} />
+  {/if}
 {/if}
 
 <Header />

@@ -12,24 +12,26 @@
   <div class="section row v-center">
     <Product title="SanX" class="mrg-l mrg--r" />
 
-    {#if $IsMobile}
-      <Svg
-        id={isMenuOpened ? 'cross' : 'menu'}
-        w={isMenuOpened ? '12' : '16'}
-        h="12"
-        class="mrg-a mrg--l $style.menu"
-        on:click={() => (isMenuOpened = !isMenuOpened)} />
-    {:else}
-      <Products />
+    {#if process.browser}
+      {#if $IsMobile}
+        <Svg
+          id={isMenuOpened ? 'cross' : 'menu'}
+          w={isMenuOpened ? '12' : '16'}
+          h="12"
+          class="mrg-a mrg--l $style.menu"
+          on:click={() => (isMenuOpened = !isMenuOpened)} />
+      {:else}
+        <Products />
 
-      <!-- <a class="link" href="#metrics">Metrics</a> -->
-      <!-- <a class="link" href="#changes">Changes</a> -->
-      <a class="link" href="#allocations">Allocations</a>
-      <a class="link" href="#methodology">Methodology</a>
+        <!-- <a class="link" href="#metrics">Metrics</a> -->
+        <!-- <a class="link" href="#changes">Changes</a> -->
+        <a class="link mrg-a mrg--l" href="#allocations">Allocations</a>
+        <a class="link" href="#methodology">Methodology</a>
 
-      <!-- <a class="btn border mrg-a mrg--l" href="/">Log in</a> -->
+        <!-- <a class="btn border mrg-a mrg--l" href="/">Log in</a> -->
 
-      <!-- <a class="btn border login mrg-l mrg--l" href="/">Create an account</a> -->
+        <!-- <a class="btn border login mrg-l mrg--l" href="/">Create an account</a> -->
+      {/if}
     {/if}
   </div>
 </nav>

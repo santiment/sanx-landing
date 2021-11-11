@@ -1,5 +1,5 @@
 <script>
-  import Table from 'webkit/ui/Table.svelte'
+  import Table from 'webkit/ui/Table/svelte'
   import Project from './Project.svelte'
   import Quantity from './Quantity.svelte'
   import { queryIndexTokens, usdFormatter } from './utils'
@@ -17,25 +17,24 @@
     {
       title: 'Quantity per token',
       Component: Quantity,
+      sortAccessor: ({ unit }) => unit,
     },
     {
       title: 'Price per token',
       format: ({ pricePerToken }) => usdFormatter(pricePerToken),
+      sortAccessor: ({ pricePerToken }) => pricePerToken,
     },
     {
       title: 'Token Price',
       format: ({ priceUsd }) => usdFormatter(priceUsd),
+      sortAccessor: ({ priceUsd }) => priceUsd,
     },
     {
       title: 'Allocation',
       format: ({ allocation }) =>
         allocation ? +(allocation * 100).toFixed(2) + '%' : 'No data',
+      sortAccessor: ({ allocation }) => allocation,
     },
-    // {
-    //   title: 'Change, 24h %',
-    //   Component: Change,
-    //   className: '$style.change',
-    // },
   ]
 
   let items = []
@@ -56,6 +55,7 @@
     {isLoading}
     {columns}
     {items}
+    sortedColumn={columns[2]}
     keyProp="slug"
     class="$style.table"
     minRows={8} />
@@ -85,8 +85,5 @@
   .table .number {
     padding-left: 32px !important;
     color: var(--waterloo);
-  }
-  .table .change {
-    padding-right: 32px;
   }
 </style>

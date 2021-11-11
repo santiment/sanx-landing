@@ -14,10 +14,12 @@
       </p>
     </div>
 
-    {#if $IsMobile}
-      <MobileAllocations />
-    {:else}
-      <Allocations />
+    {#if process.browser}
+      {#if $IsMobile}
+        <MobileAllocations />
+      {:else}
+        <Allocations />
+      {/if}
     {/if}
   </div>
 </section>

@@ -68,16 +68,14 @@
   h1 {
     font-size: 48px;
     line-height: 60px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
 
   span {
     color: var(--purple);
   }
 
-  :global(.phone-xs),
-  :global(.phone),
-  :global(.tablet) {
+  :global(body:not(.desktop)) {
     h1 {
       font-size: 32px;
       line-height: 40px;
@@ -89,7 +87,7 @@
     }
 
     .header {
-      padding: 268px 0 44px;
+      padding: 268px 0 64px;
       margin: 0 auto;
       max-width: 450px;
     }
