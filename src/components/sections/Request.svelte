@@ -4,9 +4,9 @@
 
 <section>
   <div class="section">
-    <div class="h2 txt-b mrg-m mrg--b">Want some? Request bellow ;)</div>
+    <div class="h2 txt-b mrg-m mrg--b">Stay Tuned!</div>
     <p class="body-1 mrg-xxl mrg--b">
-      Help to understand what are you looking at, what options you have, etc
+    Be the first to know about new SanX features and updates
     </p>
     <Form class="body-2" />
   </div>
