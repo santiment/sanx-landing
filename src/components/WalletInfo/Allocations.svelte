@@ -1,19 +1,28 @@
 <script>
   export let assets
+
+  $: allocations = getAllocation(assets)
+
+  function getAllocation(assets) {
+    return assets.map(({ ticker, allocation }) => ({
+      ticker,
+      allocation: allocation * 100,
+    }))
+  }
 </script>
 
 Assets USD distribution
 <div class="allocations row mrg-l mrg--t mrg--b">
-  {#each assets as { ticker, allocation } (ticker)}
+  {#each allocations as { ticker, allocation } (ticker)}
     <div class="allocation" style="width:{allocation}%" />
   {/each}
 </div>
 
 <div class="assets row caption v-center">
-  {#each assets as { ticker, allocation } (ticker)}
+  {#each allocations as { ticker, allocation } (ticker)}
     <div class="asset">
       <span>{ticker},</span>
-      {allocation}%
+      {+allocation.toFixed(2)}%
     </div>
   {/each}
 </div>

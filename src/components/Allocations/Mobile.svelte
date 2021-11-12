@@ -1,8 +1,8 @@
 <script>
   import Table from 'webkit/ui/Table/svelte'
+  import { queryAllocations } from '@/api/allocations'
   import Project from './Project.svelte'
   import Quantity from './Quantity.svelte'
-  import { queryIndexTokens } from './utils'
 
   const columns = [
     {
@@ -24,8 +24,8 @@
   let isLoading = true
 
   if (process.browser) {
-    queryIndexTokens().then((tokens) => {
-      items = tokens
+    queryAllocations().then((data) => {
+      items = data
       isLoading = false
     })
   }

@@ -1,8 +1,9 @@
 <script>
   import Table from 'webkit/ui/Table/svelte'
+  import { queryAllocations } from '@/api/allocations'
   import Project from './Project.svelte'
   import Quantity from './Quantity.svelte'
-  import { queryIndexTokens, usdFormatter } from './utils'
+  import { usdFormatter } from './utils'
 
   const columns = [
     {
@@ -17,7 +18,7 @@
     {
       title: 'Quantity per token',
       Component: Quantity,
-      sortAccessor: ({ unit }) => unit,
+      sortAccessor: ({ quantityPerToken }) => quantityPerToken,
     },
     {
       title: 'Price per token',
@@ -41,8 +42,8 @@
   let isLoading = true
 
   if (process.browser) {
-    queryIndexTokens().then((tokens) => {
-      items = tokens
+    queryAllocations().then((data) => {
+      items = data
       isLoading = false
     })
   }

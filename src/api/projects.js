@@ -6,7 +6,6 @@ query allProjects($slugs: [String]){
     slug
     name
     ticker
-    priceUsd
 	}
 }
 `

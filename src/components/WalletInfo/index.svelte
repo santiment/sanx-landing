@@ -1,44 +1,16 @@
 <script>
   import { copy } from 'webkit/utils'
   import Svg from 'webkit/ui/Svg.svelte'
+  import { queryWalletAssets } from '@/api/wallet'
   import More from './More.svelte'
   import Allocations from './Allocations.svelte'
   import Balance from './Balance.svelte'
 
-  let assets = [
-    {
-      ticker: 'UNI',
-      allocation: 54.6,
-    },
-    {
-      ticker: 'AAVE',
-      allocation: 14.5,
-    },
-    {
-      ticker: 'MKR',
-      allocation: 10.3,
-    },
-    {
-      ticker: 'COMP',
-      allocation: 7.1,
-    },
-    {
-      ticker: 'SUSHI',
-      allocation: 5,
-    },
-    {
-      ticker: 'YFI',
-      allocation: 4.4,
-    },
-    {
-      ticker: 'SNX',
-      allocation: 3.9,
-    },
-    {
-      ticker: 'WETH',
-      allocation: 0.1,
-    },
-  ]
+  let assets = []
+
+  if (process.browser) {
+    queryWalletAssets().then((data) => (assets = data))
+  }
 
   let copyCancel
   let copyLabel = 'Copy'
