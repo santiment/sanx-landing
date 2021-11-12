@@ -1,26 +1,29 @@
 <script>
+  import { SlugColor } from './utils'
+
   export let assets
 
   $: allocations = getAllocation(assets)
 
   function getAllocation(assets) {
-    return assets.map(({ ticker, allocation }) => ({
+    return assets.map(({ slug, ticker, allocation }) => ({
       ticker,
       allocation: allocation * 100,
+      color: SlugColor[slug],
     }))
   }
 </script>
 
 Assets USD distribution
 <div class="allocations row mrg-l mrg--t mrg--b">
-  {#each allocations as { ticker, allocation } (ticker)}
-    <div class="allocation" style="width:{allocation}%" />
+  {#each allocations as { ticker, allocation, color } (ticker)}
+    <div class="allocation" style="width:{allocation}%;background:{color}" />
   {/each}
 </div>
 
 <div class="assets row caption v-center">
-  {#each allocations as { ticker, allocation } (ticker)}
-    <div class="asset">
+  {#each allocations as { ticker, allocation, color } (ticker)}
+    <div class="asset" style="--color:{color}">
       <span>{ticker},</span>
       {+allocation.toFixed(2)}%
     </div>
@@ -35,7 +38,6 @@ Assets USD distribution
 
   .allocation {
     height: 8px;
-    background: red;
     margin-left: 2px;
     min-width: 6px;
 
@@ -54,7 +56,7 @@ Assets USD distribution
       content: '';
       height: 2px;
       width: 10px;
-      background: var(--color, red);
+      background: var(--color);
       display: inline-block;
       border-radius: 1px;
       margin: 0 6px 3px 0px;
