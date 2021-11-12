@@ -55,25 +55,36 @@
 <style lang="scss">
   .wallet {
     color: var(--waterloo);
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
     margin: 0 0 64px;
   }
   :global(.desktop) .wallet {
     margin: 0 0 88px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
   }
 
   .address,
   .more {
-    padding: 20px 32px;
     background: var(--purple-light-1);
-  }
-  .address {
-    border-top-left-radius: 4px;
+    padding: 20px 16px;
   }
   .more {
-    border-top-right-radius: 4px;
-    padding-left: 70px;
+    padding-top: 12px;
+  }
+
+  :global(.desktop) {
+    .address,
+    .more {
+      padding: 20px 32px;
+    }
+
+    .address {
+      border-top-left-radius: 4px;
+    }
+    .more {
+      border-top-right-radius: 4px;
+      padding-left: 70px;
+    }
   }
 
   h3 {
@@ -89,19 +100,27 @@
 
   .allocations,
   .balance {
-    border: 1px solid var(--porcelain);
-    border-top: 0;
-    padding: 40px 32px;
-  }
-
-  .allocations {
-    border-right: 0;
-    border-bottom-left-radius: 4px;
+    padding: 20px 16px 0;
   }
   .balance {
-    border-left: 0;
-    border-bottom-right-radius: 4px;
-    padding-left: 70px;
+    padding-top: 32px;
+  }
+
+  :global(.desktop) {
+    .allocations,
+    .balance {
+      padding: 40px 32px;
+    }
+
+    .allocations {
+      border-right: 0;
+      border-bottom-left-radius: 4px;
+    }
+    .balance {
+      border-left: 0;
+      border-bottom-right-radius: 4px;
+      padding-left: 70px;
+    }
   }
 
   button {

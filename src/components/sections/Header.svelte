@@ -19,7 +19,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section wallet">
   <WalletInfo />
 </section>
 
@@ -117,5 +117,9 @@
     .avi {
       width: 46px;
     }
+  }
+
+  :global(body:not(.desktop)) .wallet {
+    padding: 0;
   }
 </style>

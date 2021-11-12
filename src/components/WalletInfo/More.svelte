@@ -1,5 +1,5 @@
 Learn more on
-<div class="row mrg-s mrg--t">
+<div class="row">
   <a
     target="_blank"
     rel="noopener noreferrer"
@@ -31,6 +31,9 @@ Learn more on
 </div>
 
 <style>
+  .row {
+    flex-wrap: wrap;
+  }
   .link {
     display: flex;
     align-items: center;
@@ -39,7 +42,7 @@ Learn more on
     --bg: var(--white);
     --color: var(--black);
     --color-hover: var(--accent);
-    margin-right: 8px;
+    margin: 8px 8px 0 0;
   }
 
   img {
