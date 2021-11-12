@@ -1,4 +1,5 @@
 <script>
+  import WalletInfo from '../WalletInfo/index.svelte'
   import Form from '../Form.svelte'
 </script>
 
@@ -16,6 +17,10 @@
     <img src="uni-coin.svg" alt="uni" class="uni" />
     <img src="avi-coin.svg" alt="avi" class="avi" />
   </div>
+</section>
+
+<section class="section">
+  <WalletInfo />
 </section>
 
 <style lang="scss">
