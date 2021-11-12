@@ -109,6 +109,8 @@
   :global(.desktop) {
     .allocations,
     .balance {
+      border: 1px solid var(--porcelain);
+      border-top: 0;
       padding: 40px 32px;
     }
 
