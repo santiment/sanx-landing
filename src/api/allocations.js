@@ -30,5 +30,5 @@ const precacher =
 
 const options = { precacher }
 export function queryAllocations() {
-  return query(WALLET_TOTAL_SUPPLY_QUERY, options)
+  return query(WALLET_TOTAL_SUPPLY_QUERY, options).catch(() => [])
 }

@@ -6,7 +6,7 @@
   $: allocations = getAllocation(assets)
 
   function getAllocation(assets) {
-    return assets.map(({ slug, ticker, allocation }) => ({
+    return assets.map(({ slug, ticker = slug, allocation }) => ({
       ticker,
       allocation: allocation * 100,
       color: SlugColor[slug],

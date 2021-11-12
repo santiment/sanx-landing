@@ -19,7 +19,7 @@ Current balance
 <h3 class="mrg-xs mrg--t mrg--b">
   <span class="h4">{usdFormatter(totalBalance)}</span> USD
 </h3>
-{#each assets as { ticker, balanceUsd }}
+{#each assets as { slug, ticker = slug, balanceUsd }}
   <span class="asset">
     {ticker} ${millify(balanceUsd)}
   </span>
