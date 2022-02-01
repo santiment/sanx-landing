@@ -1,6 +1,6 @@
 <script>
   import { copy } from 'webkit/utils'
-  import Svg from 'webkit/ui/Svg.svelte'
+  import Svg from 'webkit/ui/Svg/svelte'
   import { queryWalletAssets } from '@/api/wallet'
   import More from './More.svelte'
   import Allocations from './Allocations.svelte'
@@ -25,7 +25,7 @@
   }
 </script>
 
-<div class="wallet">
+<div class="wallet c-waterloo">
   <div class="address">
     <div class="row v-center">
       Contract address
@@ -34,7 +34,7 @@
         <Svg id="copy" w="16" class="mrg-s mrg--l" />
       </button>
     </div>
-    <h3 class="body-1 mrg-s mrg--t">
+    <h3 class="body-1 mrg-s mrg--t c-black">
       0xc7c9f0d98123d48f6720cd36d0da09b603173613
     </h3>
   </div>
@@ -54,7 +54,6 @@
 
 <style lang="scss">
   .wallet {
-    color: var(--waterloo);
     margin: 0 0 64px;
   }
   :global(.desktop) .wallet {
@@ -88,7 +87,6 @@
   }
 
   h3 {
-    color: var(--black);
     overflow: hidden;
     text-overflow: ellipsis;
 

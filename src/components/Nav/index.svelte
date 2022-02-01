@@ -2,7 +2,7 @@
   import { IsMobile } from 'webkit/stores/responsive'
   import Product from 'webkit/ui/Product.svelte'
   import Products from 'webkit/ui/Products/svelte'
-  import Svg from 'webkit/ui/Svg.svelte'
+  import Svg from 'webkit/ui/Svg/svelte'
   import MobileMenu from './MobileMenu.svelte'
 
   let isMenuOpened = false

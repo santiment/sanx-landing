@@ -1,5 +1,5 @@
 <script>
-  import Svg from 'webkit/ui/Svg.svelte'
+  import Svg from 'webkit/ui/Svg/svelte'
 
   export let change = 3.24
 </script>

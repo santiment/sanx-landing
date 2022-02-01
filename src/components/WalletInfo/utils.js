@@ -9,10 +9,16 @@ export const SlugColor = {
   weth: '#BF2065',
 }
 
-export function applyColors(assets) {
-  for (let i = assets.length - 1; i > -1; i--) {
-    const asset = assets[i]
-    const color = SlugColor[asset.slug]
-    if (color) asset.color = color
-  }
+const UNUSED_COLORS = [
+  '#FF8450',
+  '#D4E763',
+  '#FF6363',
+  '#8358FF',
+  '#AC948C',
+  '#158A59',
+]
+
+export function newUnusedColorGenerator() {
+  let i = 0
+  return () => UNUSED_COLORS[i++]
 }

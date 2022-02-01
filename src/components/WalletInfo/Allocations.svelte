@@ -1,15 +1,16 @@
 <script>
-  import { SlugColor } from './utils'
+  import { newUnusedColorGenerator, SlugColor } from './utils'
 
   export let assets
 
   $: allocations = getAllocation(assets)
 
   function getAllocation(assets) {
+    const getUnusedColor = newUnusedColorGenerator()
     return assets.map(({ slug, ticker = slug, allocation }) => ({
       ticker,
       allocation: allocation * 100,
-      color: SlugColor[slug],
+      color: SlugColor[slug] || getUnusedColor(),
     }))
   }
 </script>
@@ -23,8 +24,8 @@ Assets USD distribution
 
 <div class="assets row caption v-center">
   {#each allocations as { ticker, allocation, color } (ticker)}
-    <div class="asset" style="--color:{color}">
-      <span>{ticker},</span>
+    <div class="asset" style="--s-color:{color}">
+      <span class="c-black">{ticker},</span>
       {+allocation.toFixed(2)}%
     </div>
   {/each}
@@ -56,13 +57,10 @@ Assets USD distribution
       content: '';
       height: 2px;
       width: 10px;
-      background: var(--color);
+      background: var(--s-color);
       display: inline-block;
       border-radius: 1px;
       margin: 0 6px 3px 0px;
     }
-  }
-  span {
-    color: var(--black);
   }
 </style>
