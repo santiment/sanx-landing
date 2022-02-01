@@ -3,7 +3,7 @@
   "description": "SanX Landing",
   "version": "0.0.1",
   "scripts": {
-    "dev": "BACKEND_URL=https://api-stage.santiment.net sapper dev",
+    "dev": "BACKEND_URL=https://api.santiment.net sapper dev",
     "build": "npm run webkit && npm run build:static",
     "build:ssr": "NODE_ENV=production sapper build",
     "build:static": "NODE_ENV=production sapper export",
@@ -33,7 +33,7 @@
     "sapper": "^0.29.3",
     "sass-loader": "^12.2.0",
     "style-loader": "^2.0.0",
-    "svelte": "^3.44.1",
+    "svelte": "^3.44.3",
     "svelte-loader": "^3.1.2",
     "svelte-preprocess": "4.6.9",
     "svelte-preprocess-cssmodules": "https://github.com/DmitriVanGuard/svelte-preprocess-cssmodules#0fe6fa7",

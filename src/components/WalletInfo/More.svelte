@@ -5,7 +5,7 @@ Learn more on
     rel="noopener noreferrer"
     href="https://app.santiment.net/labs/balance?address=0xc7c9f0d98123d48f6720cd36d0da09b603173613"
     class="btn-2 link">
-    <img src="webkit/icons/san-logo.svg" alt="SAN" />
+    <img src="webkit/illus/san-logo.svg" alt="SAN" />
     Sanbase</a>
   <a
     target="_blank"
