@@ -12,7 +12,16 @@
 </script>
 
 <svelte:head>
-  <title>SanX</title>
+  <title>Crypto Index: Based on Crypto-native Metrics - SanX</title>
+  <meta
+    property="og:title"
+    content="Crypto Index: Based on Crypto-native Metrics - SanX" />
+  <meta
+    name="description"
+    content="Explore our crypto index to optimize your DeFi exposure with insights from thousands of token holders' on-chain behavior. Our rebalancing fuses on hybrid on-chain and financial data." />
+  <meta
+    property="og:description"
+    content="Explore our crypto index to optimize your DeFi exposure with insights from thousands of token holders' on-chain behavior. Our rebalancing fuses on hybrid on-chain and financial data." />
 </svelte:head>
 
 <Nav />
